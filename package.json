@@ -1,0 +1,26 @@
+{
+  "name": "filo",
+  "version": "1.0.0",
+  "description": "filo app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KTurnage/Project2.git"
+  },
+  "author": "bad news bears",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KTurnage/Project2/issues"
+  },
+  "homepage": "https://github.com/KTurnage/Project2#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mysql": "^2.16.0",
+    "sequelize": "^5.3.5"
+  }
+}
