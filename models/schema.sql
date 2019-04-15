@@ -1,0 +1,24 @@
+DROP DATABASE IF EXISTS FILO_db;
+CREATE DATABASE FILO_db;
+USE FILO_db;
+
+CREATE TABLE beenTo
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    park_name VARCHAR (50),
+    activity VARCHAR (50)
+);
+
+CREATE TABLE wantToGo
+(
+    id int NOT NULL AUTO_INCREMENT,
+    park_name VARCHAR (50),
+    activity VARCHAR (50)
+);
+
+INSERT INTO beenTo
+
+INSERT INTO wantToGo
+
+SELECT * FROM beenTo
+SELECT * FROM wantToGo
