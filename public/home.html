@@ -15,8 +15,9 @@
     <script src="/public/js/index.js"></script>
     <style>
         #map{
-          height:700px;
-          width:65%;
+        margin: 0 auto;
+        height:700px;
+        width:65%;
         }
       </style>
 </head>
@@ -49,7 +50,7 @@
     </div>
     
 
-    <div id="map"></div>
+    <div id="map" class="my-auto"></div>
     <script>
       function initMap(){
         // Map options
@@ -89,7 +90,8 @@
           content:'<h1>Rocky Mountain NP</h1>',
         });
   
-        marker.addListener('click', function(){
+        marker.addListener('click', function(e){
+            console.log(e);
           infoWindow.open(map, marker);
         });
   
