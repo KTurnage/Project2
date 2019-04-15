@@ -13,6 +13,12 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="../public/css/handlebar_page_styles.css" type="text/css" />
     <script src="/public/js/index.js"></script>
+    <style>
+        #map{
+          height:700px;
+          width:65%;
+        }
+      </style>
 </head>
 
 <body>
@@ -32,8 +38,7 @@
         </div>
     </nav>
 
-    <br>
-    <br>
+    
 
     <div class="container h-100 d-flex">
         <div class="jumbotron my-auto">
@@ -43,6 +48,148 @@
         </div>
     </div>
     
+
+    <div id="map"></div>
+    <script>
+      function initMap(){
+        // Map options
+        var options = {
+          zoom:7.5,
+          center:{lat:39.119,lng:-105.473}
+        }
+  
+        // New map
+        var map = new google.maps.Map(document.getElementById('map'), options);
+  
+        // Listen for click on map
+        google.maps.event.addListener(map, 'click', function(event){
+          // Add marker
+          // addMarker({coords:event.latLng});
+        });
+  
+        
+        // Add marker
+        var marker = new google.maps.Marker({
+          position:{lat:40.342,lng:-105.683},
+          map:map,
+          animation: google.maps.Animation.DROP,
+          icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+        });
+        // animation for pin 
+        marker.addListener("click, toggleBounce");
+        function toggleBounce() {
+    if (marker.getAnimation() !== null) {
+      marker.setAnimation(null);
+    } else {
+      marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
+  }
+  
+        var infoWindow = new google.maps.InfoWindow({
+          content:'<h1>Rocky Mountain NP</h1>',
+        });
+  
+        marker.addListener('click', function(){
+          infoWindow.open(map, marker);
+        });
+  
+        // Array of markers
+        var markers = [
+          {
+            coords:{lat:37.791,lng:-105.594},
+            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+            content:'<h1>Great Sand Dunes</h1>'
+          },
+          {
+            coords:{lat:38.575,lng:-107.741},
+            content:'<h1>Black Canyon NP</h1>'
+          },
+          {
+            coords:{lat:37.937,lng:-107.812},
+            content:'<h1>Telluride</h1>'
+          },
+          {
+            coords:{lat:37.811,lng:-107.664},
+            content:'<h1>Silverton</h1>'
+          },
+          {
+            coords:{lat:39.070, lng:-106.989},
+            content:'<h1>Maroon Bells</h1>'
+          },
+          {
+            coords:{lat:39.063,lng:-108.550},
+            content:'<h1>Grand Junction</h1>'
+          },
+          {
+            coords:{lat:37.230,lng:-108.461},
+            content:'<h1>Mesa Verde</h1>'
+          },
+          {
+            coords:{lat:38.878,lng:-104.869},
+            content:'<h1>Garden Of The Gods</h1>'
+          },
+          {
+            coords:{lat:38.840,lng:-105.042},
+            content:'<h1>Pikes Peak</h1>'
+          },
+          {
+            coords:{lat:37.275,lng:-107.880},
+            content:'<h1>Durango</h1>'
+          },
+          {
+            coords:{lat:38.022,lng:-107.671},
+            content:'<h1>Ouray</h1>'
+          },
+          {
+            coords:{lat:39.588,lng:-105.643},
+            content:'<h1>Mt. Evans</h1>'
+          },
+          {
+            coords:{lat:40.377,lng:-105.521},
+            content:'<h1>Estes Park</h1>'
+          },
+          {
+            coords:{lat:40.252,lng:-105.823},
+            content:'<h1>Grand Lake</h1>'
+          }
+        ];
+  
+        // Loop through markers
+        for(var i = 0;i < markers.length;i++){
+          // Add marker
+          addMarker(markers[i]);
+        }
+  
+        // Add Marker Function
+        function addMarker(props){
+          var marker = new google.maps.Marker({
+            position:props.coords,
+            map:map,
+            // icon:props.iconImage
+          });
+  
+          // Check for customicon
+          if(props.iconImage){
+            // Set icon image
+            marker.setIcon(props.iconImage);
+          }
+  
+          // Check content
+          if(props.content){
+            var infoWindow = new google.maps.InfoWindow({
+              content:props.content
+            });
+  
+            marker.addListener('click', function(){
+              infoWindow.open(map, marker);
+            });
+          }
+        }
+      }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDVfz1tDynEKQWU6L7t3J84U2APeCJEH8&callback=initMap">
+      </script>
 
 
 
