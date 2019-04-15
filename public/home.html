@@ -13,12 +13,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="../public/css/handlebar_page_styles.css" type="text/css" />
     <script src="/public/js/index.js"></script>
-    <style>
-        #map{
-          height:700px;
-          width:65%;
-        }
-      </style>
+    
 </head>
 
 <body>
@@ -86,7 +81,7 @@
   }
   
         var infoWindow = new google.maps.InfoWindow({
-          content:'<h1>Rocky Mountain NP</h1>',
+          content:'<h1><a href="pages/rmnp.html">Rocky Mountain NP</a></h1>',
         });
   
         marker.addListener('click', function(){
@@ -98,58 +93,71 @@
           {
             coords:{lat:37.791,lng:-105.594},
             iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content:'<h1>Great Sand Dunes</h1>'
+            content:'<h1><a href="http://www.yahoo.com">Great Sand Dunes</a></h1>'
           },
           {
             coords:{lat:38.575,lng:-107.741},
+            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
             content:'<h1>Black Canyon NP</h1>'
           },
           {
             coords:{lat:37.937,lng:-107.812},
+            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
             content:'<h1>Telluride</h1>'
           },
           {
             coords:{lat:37.811,lng:-107.664},
+            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
             content:'<h1>Silverton</h1>'
           },
           {
             coords:{lat:39.070, lng:-106.989},
+            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
             content:'<h1>Maroon Bells</h1>'
           },
           {
             coords:{lat:39.063,lng:-108.550},
+            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
             content:'<h1>Grand Junction</h1>'
           },
           {
             coords:{lat:37.230,lng:-108.461},
+            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
             content:'<h1>Mesa Verde</h1>'
           },
           {
             coords:{lat:38.878,lng:-104.869},
+            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
             content:'<h1>Garden Of The Gods</h1>'
           },
           {
             coords:{lat:38.840,lng:-105.042},
+            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
             content:'<h1>Pikes Peak</h1>'
           },
           {
             coords:{lat:37.275,lng:-107.880},
+            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
             content:'<h1>Durango</h1>'
           },
           {
             coords:{lat:38.022,lng:-107.671},
+            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
             content:'<h1>Ouray</h1>'
           },
           {
             coords:{lat:39.588,lng:-105.643},
+            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
             content:'<h1>Mt. Evans</h1>'
           },
           {
             coords:{lat:40.377,lng:-105.521},
+            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
             content:'<h1>Estes Park</h1>'
           },
           {
             coords:{lat:40.252,lng:-105.823},
+            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
             content:'<h1>Grand Lake</h1>'
           }
         ];
