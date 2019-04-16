@@ -1,3 +1,20 @@
+body {
+    background-image: url("https://s22409.pcdn.co/wp-content/uploads/2017/11/Aaron-Spong_The-Spanish-Peaks--1280x640.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+
+  }
+
+
 .jumbotron {
     margin-top: 100px;
 }
+
+#map {
+    margin: 0 auto;
+    height: 700px;
+    width: 65%;
+  }
+
