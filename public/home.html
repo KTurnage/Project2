@@ -7,23 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
     <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="../public/css/handlebar_page_styles.css" type="text/css" />
     <script src="/public/js/index.js"></script>
-<<<<<<< HEAD
+
     <style>
         #map{
-        margin: 0 auto;
-        height:700px;
-        width:65%;
+          height:700px;
+          width:65%;
+          margin: 0 auto;
         }
       </style>
-=======
     
->>>>>>> 4b357587f54af8824474279c79f817592edc11af
 </head>
 
 <body>
@@ -38,7 +36,7 @@
                 <li><a href="#"></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Account</a></li>
+                <li><a href="../public/account.html"><span class="glyphicon glyphicon-user"></span> Account</a></li>
             </ul>
         </div>
     </nav>
@@ -74,22 +72,17 @@
   
         
         // Add marker
-        var marker = new google.maps.Marker({
-          position:{lat:40.342,lng:-105.683},
-          map:map,
-          animation: google.maps.Animation.DROP,
-          icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
-        });
-        // animation for pin 
-        marker.addListener("click, toggleBounce");
-        function toggleBounce() {
-    if (marker.getAnimation() !== null) {
-      marker.setAnimation(null);
-    } else {
-      marker.setAnimation(google.maps.Animation.BOUNCE);
-    }
-  }
+        // var marker = new google.maps.Marker({
+        //   position:{lat:40.342,lng:-105.683},
+        //   map:map,
+        //   animation: google.maps.Animation.DROP,
+        //   iconImage:'assets/icon/peak.png',
+
+        // });
+       
+  // }
   
+
         var infoWindow = new google.maps.InfoWindow({
           content:'<h1><a href="pages/rmnp.html">Rocky Mountain NP</a></h1>',
         });
@@ -98,80 +91,111 @@
             console.log(e);
           infoWindow.open(map, marker);
         });
+
   
         // Array of markers
         var markers = [
+         {
+            coords:{lat:40.342,lng:-105.683},
+            iconImage:'assets/icon/peak.png',
+            content:'<h1>Rocky Mountain NP</h1>',
+            animation:google.maps.Animation.Drop,
+          },
+          
           {
             coords:{lat:37.791,lng:-105.594},
-            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content:'<h1><a href="http://www.yahoo.com">Great Sand Dunes</a></h1>'
+
+            iconImage:'assets/icon/peak.png',
+            content:'<h1>Great Sand Dunes</h1>',
+            animation:google.maps.Animation.Drop,
           },
           {
             coords:{lat:38.575,lng:-107.741},
-            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content:'<h1>Black Canyon NP</h1>'
+            content:'<h1>Black Canyon NP</h1>',
+            iconImage:'assets/icon/peak.png',
+
           },
           {
             coords:{lat:37.937,lng:-107.812},
-            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content:'<h1>Telluride</h1>'
+            content:'<h1>Telluride</h1>',
+            iconImage:'assets/icon/peak.png',
+
           },
           {
             coords:{lat:37.811,lng:-107.664},
-            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content:'<h1>Silverton</h1>'
+            content:'<h1>Silverton</h1>',
+            iconImage:'assets/icon/peak.png',
+
           },
           {
             coords:{lat:39.070, lng:-106.989},
-            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content:'<h1>Maroon Bells</h1>'
+            content:'<h1>Maroon Bells</h1>',
+            iconImage:'assets/icon/peak.png',
+
           },
           {
             coords:{lat:39.063,lng:-108.550},
-            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content:'<h1>Grand Junction</h1>'
+            content:'<h1>Grand Junction</h1>',
+            iconImage:'assets/icon/peak.png',
+
           },
           {
             coords:{lat:37.230,lng:-108.461},
-            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content:'<h1>Mesa Verde</h1>'
+            content:'<h1>Mesa Verde</h1>',
+            iconImage:'assets/icon/peak.png',
+
           },
           {
             coords:{lat:38.878,lng:-104.869},
-            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content:'<h1>Garden Of The Gods</h1>'
+            content:'<h1>Garden Of The Gods</h1>',
+            iconImage:'assets/icon/peak.png',
+
           },
           {
             coords:{lat:38.840,lng:-105.042},
-            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content:'<h1>Pikes Peak</h1>'
+            content:'<h1>Pikes Peak</h1>',
+            iconImage:'assets/icon/peak.png',
+
           },
           {
             coords:{lat:37.275,lng:-107.880},
-            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content:'<h1>Durango</h1>'
+            content:'<h1>Durango</h1>',
+            iconImage:'assets/icon/peak.png',
+
           },
           {
             coords:{lat:38.022,lng:-107.671},
-            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content:'<h1>Ouray</h1>'
+            content:'<h1>Ouray</h1>',
+            iconImage:'assets/icon/peak.png',
+
           },
           {
             coords:{lat:39.588,lng:-105.643},
-            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content:'<h1>Mt. Evans</h1>'
+            content:'<h1>Mt. Evans</h1>',
+            iconImage:'assets/icon/peak.png',
+
           },
           {
             coords:{lat:40.377,lng:-105.521},
-            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content:'<h1>Estes Park</h1>'
+            content:'<h1>Estes Park</h1>',
+            iconImage:'assets/icon/peak.png',
+
           },
           {
             coords:{lat:40.252,lng:-105.823},
-            iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-            content:'<h1>Grand Lake</h1>'
+            content:'<h1>Grand Lake</h1>',
+            iconImage:'assets/icon/peak.png',
+
           }
         ];
+  
+    //     markers.addListener("click, toggleDrop");
+    //     function toggleDrop() {
+    // if (markers.getAnimation() !== null) {
+    //   markers.setAnimation(null);
+    // } else {
+    //   markers.setAnimation(google.maps.Animation.BOUNCE);
+    // }
   
         // Loop through markers
         for(var i = 0;i < markers.length;i++){
