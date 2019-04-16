@@ -10,6 +10,7 @@ body {
 
 .jumbotron {
     margin-top: 100px;
+    background: none;
 }
 
 #map {

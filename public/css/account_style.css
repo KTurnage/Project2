@@ -1,6 +1,14 @@
 
-body{margin-top:20px;
-background:#eee;
+body{
+  margin-top:20px;
+  background-image: url("https://mediavine-res.cloudinary.com/image/upload/s--ZPAdmUpB--/ar_16:9,c_fill,f_auto,fl_lossy,q_auto/v1548195466/afz82gxwxj3ipcv5czzh.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  margin-top: 100px;
 }
 
 .divider {
@@ -179,4 +187,9 @@ p {
 .placeholder {
   border: 1px solid orange;
   background-color: #fffffd;
+}
+
+nav {
+  background: #212121;
+  margin-bottom: 200px;
 }
