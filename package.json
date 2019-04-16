@@ -1,4 +1,4 @@
-git {
+{
   "name": "filo",
   "version": "1.0.0",
   "description": "filo app",
@@ -22,12 +22,9 @@ git {
     "express-generator": "^4.16.0",
     "express-handlebars": "^3.0.2",
     "mysql": "^2.16.0",
-
     "nodemon": "^1.18.11",
-
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-
     "sequelize": "^5.3.5"
   }
 }
