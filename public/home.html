@@ -13,7 +13,17 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="../public/css/handlebar_page_styles.css" type="text/css" />
     <script src="/public/js/index.js"></script>
+<<<<<<< HEAD
+    <style>
+        #map{
+        margin: 0 auto;
+        height:700px;
+        width:65%;
+        }
+      </style>
+=======
     
+>>>>>>> 4b357587f54af8824474279c79f817592edc11af
 </head>
 
 <body>
@@ -44,7 +54,7 @@
     </div>
     
 
-    <div id="map"></div>
+    <div id="map" class="my-auto"></div>
     <script>
       function initMap(){
         // Map options
@@ -84,7 +94,8 @@
           content:'<h1><a href="pages/rmnp.html">Rocky Mountain NP</a></h1>',
         });
   
-        marker.addListener('click', function(){
+        marker.addListener('click', function(e){
+            console.log(e);
           infoWindow.open(map, marker);
         });
   
