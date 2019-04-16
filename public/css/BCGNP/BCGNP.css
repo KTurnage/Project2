@@ -1,6 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
 body {
+<<<<<<< HEAD
   background-image: url("../../assets/images/BCGNPblur.jpg");
+=======
+
+  background-image: url("../../assets/images/BCGNPblur.jpg");
+
+
+>>>>>>> a1d0cf16d5b460aa460839b43860fda39ca6648b
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -8,7 +15,15 @@ body {
 }
 
 .blurred-bg {
+<<<<<<< HEAD
   background-image: url("../../assets/images/BCGNPblur.jpg");
+=======
+
+  background-image: url("../../assets/images/BCGNPblur.jpg");
+
+  
+
+>>>>>>> a1d0cf16d5b460aa460839b43860fda39ca6648b
   background-repeat: no-repeat;
   -moz-background-size: cover;
   -o-background-size: cover;
