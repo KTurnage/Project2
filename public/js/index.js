@@ -1,4 +1,7 @@
+console.log("Start the party. I'm here.");
+
 (function () {
+  console.log("You rang?");
   // Tutorial: https://medium.com/@PatrykZabielski/how-to-make-multi-layered-parallax-illustration-with-css-javascript-2b56883c3f27
   window.addEventListener('scroll', function (event) {
     var depth, i, layer, layers, len, movement, topDistance, translate3d;
