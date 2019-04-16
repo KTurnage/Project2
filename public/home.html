@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="../public/css/handlebar_page_styles.css" type="text/css" />
     <script src="/public/js/index.js"></script>
+
     <style>
         #map{
           height:700px;
@@ -20,6 +21,7 @@
           margin: 0 auto;
         }
       </style>
+    
 </head>
 
 <body>
@@ -34,7 +36,7 @@
                 <li><a href="#"></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Account</a></li>
+                <li><a href="../public/account.html"><span class="glyphicon glyphicon-user"></span> Account</a></li>
             </ul>
         </div>
     </nav>
@@ -50,7 +52,7 @@
     </div>
     
 
-    <div id="map"></div>
+    <div id="map" class="my-auto"></div>
     <script>
       function initMap(){
         // Map options
@@ -80,13 +82,16 @@
        
   // }
   
-        // var infoWindow = new google.maps.InfoWindow({
-        //   content:'<h1>Rocky Mountain NP</h1>',
-        // });
+
+        var infoWindow = new google.maps.InfoWindow({
+          content:'<h1><a href="pages/rmnp.html">Rocky Mountain NP</a></h1>',
+        });
   
-        // marker.addListener('click', function(){
-        //   infoWindow.open(map, marker);
-        // });
+        marker.addListener('click', function(e){
+            console.log(e);
+          infoWindow.open(map, marker);
+        });
+
   
         // Array of markers
         var markers = [
@@ -99,6 +104,7 @@
           
           {
             coords:{lat:37.791,lng:-105.594},
+
             iconImage:'assets/icon/peak.png',
             content:'<h1>Great Sand Dunes</h1>',
             animation:google.maps.Animation.Drop,

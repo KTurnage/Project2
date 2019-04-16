@@ -445,3 +445,9 @@ body {
     top: 69%;
     font-size: 50px;
   }
+
+  #map {
+    margin: 0 auto;
+    height:700px;
+    width: 65%;
+  }
