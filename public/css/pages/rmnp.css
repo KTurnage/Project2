@@ -1,8 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
 body {
+<<<<<<< HEAD
+  background-image: url("../../assets/images/RMNP.jpg");
+=======
 
   background-image: url("../../assets/images/RMNP.jpg");
 
+>>>>>>> a1d0cf16d5b460aa460839b43860fda39ca6648b
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
