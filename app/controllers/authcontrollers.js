@@ -7,5 +7,5 @@ exports.signup = function(req, res) {
 }
 
 exports.signin = function(req,res) {
-    res.render('sign-in');
+    res.render('signin');
 }
