@@ -1,6 +1,6 @@
 module.exports = function(sequelize, Sequelize) {
  
-    var User = sequelize.define('user', {
+    var User = sequelize.define('User', {
  
         id: {
             autoIncrement: true,
@@ -8,23 +8,23 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
  
-        firstname: {
+        name: {
             type: Sequelize.STRING,
             notEmpty: true
         },
  
-        lastname: {
-            type: Sequelize.STRING,
-            notEmpty: true
-        },
+        // lastname: {
+        //     type: Sequelize.STRING,
+        //     notEmpty: true
+        // },
  
-        username: {
-            type: Sequelize.TEXT
-        },
+        // username: {
+        //     type: Sequelize.TEXT
+        // },
  
-        about: {
-            type: Sequelize.TEXT
-        },
+        // about: {
+        //     type: Sequelize.TEXT
+        // },
  
         email: {
             type: Sequelize.STRING,
@@ -38,14 +38,14 @@ module.exports = function(sequelize, Sequelize) {
             allowNull: false
         },
  
-        last_login: {
-            type: Sequelize.DATE
-        },
+        // last_login: {
+        //     type: Sequelize.DATE
+        // },
  
-        status: {
-            type: Sequelize.ENUM('active', 'inactive'),
-            defaultValue: 'active'
-        }
+        // status: {
+        //     type: Sequelize.ENUM('active', 'inactive'),
+        //     defaultValue: 'active'
+        // }
  
  
     });
@@ -54,4 +54,4 @@ module.exports = function(sequelize, Sequelize) {
  
     return User;
  
-}
+};

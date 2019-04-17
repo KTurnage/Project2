@@ -39,13 +39,78 @@ app.set('view engine', '.hbs');
  
 app.get('/', function(req, res) {
   
-    res.send('Welcome to Passport with Sequelize');
+    res.render("index");
  
 });
+
+app.get("/home", function(req, res) {
+    res.render("home");
+})
+
+
+app.get("/account", function(req, res) {
+    res.render("account");
+})
+
+app.get("/BCGNP", function(req, res) {
+    res.render("BCGNP");
+})
+
+app.get("/durango", function(req, res) {
+    res.render("durango");
+})
+
+app.get("/estespark", function(req, res) {
+    res.render("estespark");
+})
+
+app.get("/GJ", function(req, res) {
+    res.render("GJ");
+})
+
+app.get("/grandlake", function(req, res) {
+    res.render("grandlake");
+})
+
+app.get("/mbells", function(req, res) {
+    res.render("mbells");
+})
+
+app.get("/mesaverdenp", function(req, res) {
+    res.render("mesaverdenp");
+})
+
+app.get("/mtevans", function(req, res) {
+    res.render("mtevans");
+})
+
+app.get("/ouray", function(req, res) {
+    res.render("ouray");
+})
+
+app.get("/pikespeak", function(req, res) {
+    res.render("pikespeak");
+})
+
+app.get("/rmnp", function(req, res) {
+    res.render("rmnp");
+})
+
+app.get("/SDNP", function(req, res) {
+    res.render("SDNP");
+})
+
+app.get("/silverton", function(req, res) {
+    res.render("silverton");
+})
+
+
 
 app.get('/api/signin', function(req, res) {
   res.send(req.body);
 })
+
+require('./controllers/userController')(app);
  
 //Models
 var models = require("./app/models");
