@@ -23,9 +23,9 @@ console.log("Start the party. I'm here.");
 }).call(this);
 
 
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+var signUpButton = document.getElementById('signUp');
+var signInButton = document.getElementById('signIn');
+var container = document.getElementById('container');
 
 signUpButton.addEventListener('click', () => {
   container.classList.add("right-panel-active");

@@ -104,6 +104,10 @@ app.get("/silverton", function(req, res) {
     res.render("silverton");
 })
 
+app.get("/gardenofthegods", function(req, res) {
+    res.render("gardenofthegods");
+})
+
 
 
 app.get('/api/signin', function(req, res) {
