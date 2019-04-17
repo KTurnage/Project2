@@ -2,7 +2,7 @@
 
 There is no better place to enjoy outdoor activities than Colorful Colorado! Whatever your fancy may be - hiking, fishing, rock climbing, kyaking, camping or off roading - find the best national and state parks to get your fix. 
 
-Keep track of what you have already done in each park, and keep a list of where you wnant to go next.
+Keep track of what you have already done in each park, and keep a list of where you want to go next.
 
 ## Getting Started
 <!-- These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. -->
@@ -10,6 +10,7 @@ Keep track of what you have already done in each park, and keep a list of where 
 <!-- link to heroku here -->
 
 ## Prerequisites
+
 <!-- What things you need to install the software and how to install them
 
 Give examples
@@ -39,19 +40,31 @@ Deployment
 Add additional notes about how to deploy this on a live system -->
 
 ## Built With
-<!-- Dropwizard - The web framework used
-Maven - Dependency Management
-ROME - Used to generate RSS Feeds
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+bcrypt-node.js
 
-Versioning
-We use SemVer for versioning. For the versions available, see the tags on this repository. -->
+express
+
+express-generator
+
+express-handlebars
+
+express-session
+
+mysql
+
+passport
+
+passport-local
+
+sequelize
 
 ## Authors
 Matthew Sturdy
+
 Todd Tate
+
 Brian Ford
+
 Krista Turnage
 
 ## Acknowledgments
