@@ -8,7 +8,7 @@ if(process.env.JAWSDB_URL) {
         host: 'ctgplw90pifdso61.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
         user: 'kohosbd37wrn67yo',
         password: 'kpn8qry2czglksv0',
-        database: 'FILO_db'
+        database: 'sequelize_passport'
     });
 };
 
