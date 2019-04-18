@@ -3,7 +3,8 @@ var express = require('express')
 var passport = require('passport')
 var session = require('express-session')
 var exphbs = require('express-handlebars')
-var app = express()
+var app = express();
+var PORT = process.env.PORT || 5000;
 
  
  
@@ -169,7 +170,9 @@ app.post('/signin', passport.authenticate('local-signin', {
 models.sequelize.sync().then(function() {
  
     console.log('Nice! Database looks fine')
- 
+    app.listen(PORT, function() {     
+            console.log("Site is live");     
+    });
  
 }).catch(function(err) {
  
@@ -180,12 +183,3 @@ models.sequelize.sync().then(function() {
 
  
  
-app.listen(5000, function(err) {
- 
-    if (!err)
- 
-        console.log("Site is live");
-         
-    else console.log(err)
- 
-});
